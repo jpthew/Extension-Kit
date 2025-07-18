@@ -25,8 +25,58 @@ Injects desired shellcode into target process using section mapping
 inject-sec <pid> <shellcode file>
 ```
 
+## inject-pp
 
+Injects shellcode into target process using Pool Party injection techniques
+
+General usage:
+```
+inject-sec <variant> <pid> <shellcode file>
+```
+
+To specify which Pool Party technique you want to use, select from v4-v8
+
+### Variant 4
+This variant utilizes the TP_IO work item to inject into the target's thread pool.
+
+Usage:
+```
+inject-sec v4 <pid> <shellcode file>
+```
+
+### Variant 5
+This variant utilizes the TP_ALPC work item to inject into the target's thread pool.
+
+Usage:
+```
+inject-sec v5 <pid> <shellcode file>
+```
+
+### Variant 6
+This variant utilizes the TP_JOB work item to inject into the target's thread pool.
+
+Usage:
+```
+inject-sec v6 <pid> <shellcode file>
+```
+
+### Variant 7
+This variant utilizes the TP_DIRECT work item to inject into the target's thread pool.
+
+Usage:
+```
+inject-sec v7 <pid> <shellcode file>
+```
+
+### Variant 8
+This variant utilizes the TP_TIMER work item to inject into the target's thread pool.
+
+Usage:
+```
+inject-sec v8 <pid> <shellcode file>
+```
 
 ## Credits
 * secinject - https://github.com/apokryptein/secinject
 * DataInject-BOF - https://github.com/iilegacyyii/DataInject-BOF
+* PoolPartyBof - https://github.com/0xEr3bus/PoolPartyBof
