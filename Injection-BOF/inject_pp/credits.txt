@@ -1,0 +1,2 @@
+Credit to https://github.com/0xEr3bus/PoolPartyBof/tree/main for converting the Pool Party injection technique into a bof format.
+Credit to the credits that he credited for creating the Pool Party technique.
